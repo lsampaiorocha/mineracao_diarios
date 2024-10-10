@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+}
+#nomeAssunto,
+#data,
+#resultados{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+#nomeAssunto{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    align-items: center;
+}
+h2{
+    border-bottom: solid black 2px;
+    text-align: center;
+    font-size: 30px;
+}
+#button{
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 5px 20px;
+    cursor: pointer;
+    background-color: #000000;
+    border: none;
+    color:#ffffff
+}
+#logo{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 10px;
+    padding-top: 10px;
+}
+#titulo{
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 40px;
+    padding-bottom: 15px;
+    font-size: 40px;
+    text-shadow: 5px 1px 5px #2528df;
+}
+body{
+    font-family:'Courier New', Courier, monospace;
+    margin: 0px;
+    min-height: 100vh;  
+    display: flex;    
+    flex-direction: column; 
+}
+html{
+    min-height: 100%;
+    height: auto;
+    background-color: #eeeef8;
+}
+header{
+    margin-bottom: 50px;
+    background-color: black;
+    color: #ffffff;
+    background-image: url("../img/pngtree-abstract-waving-particle-technology-background-abstract-gradient-design-template-for-brochures-image_416117-removebg-preview\ \(1\).png");
+    background-position-x: left;
+    background-position-y: 100px;
+    box-shadow: 0px 5px 5px rgb(18, 53, 94);
+}
+#resultados{
+    margin-bottom: 100px;
+}
+#resultados div{
+    border: black solid 2px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: rgb(204, 205, 218);
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#resultados div p{
+    margin: 0px;
+    text-align: justify;
+}
+#resultados div h3{
+    margin: 0px;
+    text-align: justify;
+    color: black;
+}
+#pergunta{
+    border: #000000 solid 2px;
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    background-color: rgb(204, 205, 218);
+}
+#datai,
+#dataf{
+    cursor:pointer;
+}
+footer{
+    margin-top: auto;
+    background-color: black;
+    color: #ffffff;
+    background-image: url("../img/pngtree-abstract-waving-particle-technology-background-abstract-gradient-design-template-for-brochures-image_416117-removebg-preview\ \(1\).png");
+    background-position-x: left;
+    background-position-y: 100px;
+    box-shadow: 0px -3px 10px rgb(18, 53, 94);
+    height: 85px;
+    width: 100%;
+}
+#texto{
+    text-align: justify;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar arquivos</title>
+    <script src="js/scripts.js" defer></script>
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img id="logo" src="img/Captura_de_tela_2024-09-23_135059-removebg-preview.png"/>
+        <h1 id="titulo">Search DataMining - LAGIC</h1>
+    </header>
+    <div id="pergunta">
+        <h2>Digite o órgão, assunto ou nome que deseja buscar:</h2>
+        <div id="nomeAssunto">
+            <div>
+                <label for="orgao">Órgão emissor:</label>
+                <input type="text" name="orgao" placeholder="Insira um orgão" id="orgao">
+            </div>
+            <div>
+                <label for="assunto">Assunto:</label>
+                <input type="text" name="assunto" placeholder="Insira um assunto" id="assunto">
+            </div>    
+            <div>
+                <label for="nome">Palavra:</label>
+                <input type="text" id="nome" name="nome" placeholder="Insira um nome">
+            </div>
+        </div>
+        <div id="data">
+            <label for="datai">Escolha a data de início:</label>
+            <br>
+            <input type="date" name="datei" id="datai">
+            <br>
+            <br>
+            <label for="datef">Escolha a data de fim:</label>
+            <br>
+            <input type="date" name="datef" id="dataf">
+            <br>
+            <button type="submit" id="button" >Enviar</button>
+        </div>
+    </div>
+    <div id="resultados"></div>
+    <footer>
+    </footer>
+</body>
+</html>
