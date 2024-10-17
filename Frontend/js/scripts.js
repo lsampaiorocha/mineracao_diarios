@@ -18,33 +18,31 @@ function executar(e){
     const datai = new Date(document.querySelector("#datai").value);
     const dataf = new Date(document.querySelector("#dataf").value);
     const nome = document.querySelector("#nome").value.toLowerCase();
-    json.forEach(jsonFilePath => {
-        fetch(jsonFilePath)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erro ao carregar o arquivo JSON');
-            }
-            return response.json(); 
-        })
-        .then(arquivos => {
-            const resultados = arquivos.filter(arquivo => {
-                if (!orgao && !assunto && isNaN(datai) && isNaN(dataf) && !nome) {
-                    return false;
+    const resultadosDiv = document.querySelector('#resultados');
+    resultadosDiv.innerHTML = '';
+    const promises = json.map(jsonFilePath =>{
+        return fetch(jsonFilePath)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro ao carregar o arquivo JSON');
                 }
-                const dataArquivo = new Date(arquivo.DATA.split('-').reverse().join('-'));
-                const OrgaoIgual = !orgao || arquivo.NOME.toLowerCase().includes(orgao);
-                const AssuntoIgual = !assunto || arquivo.assunto.toLowerCase().includes(assunto);
-                const nomeIgual = !nome || arquivo.TEXTO.toLowerCase().includes(nome);
-                const Data = (!isNaN(datai) && !isNaN(dataf))
-                    ? (dataArquivo >= datai && dataArquivo <= dataf)//Aqui o ? funciona como um if as condições anteriores forem verdadeiras realiza o que tem dps dele, caso false aciona o : que é o else
-                    : true;
+                return response.json(); 
+            })
+            .then(arquivos => {
+                const resultados = arquivos.filter(arquivo => {
+                    if (!orgao && !assunto && isNaN(datai) && isNaN(dataf) && !nome) {
+                        return false;
+                    }
+                    const dataArquivo = new Date(arquivo.DATA.split('-').reverse().join('-'));
+                    const OrgaoIgual = !orgao || arquivo.NOME.toLowerCase().includes(orgao);
+                    const AssuntoIgual = !assunto || arquivo.assunto.toLowerCase().includes(assunto);
+                    const nomeIgual = !nome || arquivo.TEXTO.toLowerCase().includes(nome);
+                    const Data = (!isNaN(datai) && !isNaN(dataf))
+                        ? (dataArquivo >= datai && dataArquivo <= dataf)//Aqui o ? funciona como um if as condições anteriores forem verdadeiras realiza o que tem dps dele, caso false aciona o : que é o else
+                        : true;
 
-                return OrgaoIgual && AssuntoIgual && Data && nomeIgual;
-            });
-
-            const resultadosDiv = document.querySelector('#resultados');
-            resultadosDiv.innerHTML = ''; 
-            if (resultados.length > 0) {
+                    return OrgaoIgual && AssuntoIgual && Data && nomeIgual;
+                }); 
                 resultados.forEach(resultado => {
                     const item = document.createElement('div');
                     item.innerHTML = `
@@ -60,13 +58,22 @@ function executar(e){
                         <br><br>`;
                     resultadosDiv.appendChild(item);
                 });
-            } else {
-                resultadosDiv.innerHTML = '<p style="font-weight: 700">Nenhum arquivo encontrado</p>';
-            }
-        })
-        .catch(error => {
-            document.getElementById('resultados').innerHTML = 'Erro: ' + error;
-        });
+            })
+            .catch(error => {
+                document.getElementById('resultados').innerHTML = 'Erro: ' + error;
+            });
+    })
+    Promise.all(promises).then(() => {
+        if(resultadosDiv.innerHTML.trim() === ''){
+            const nenhum = document.createElement("p")
+            nenhum.textContent = "Nenhum arquivo encontrado!"
+            nenhum.classList.add("nenhum")
+            resultadosDiv.appendChild(nenhum)
+        }
+        else{
+            var nenhum = document.querySelector(".nenhum")
+            nenhum.remove()
+        }
     })
 };
 botao.addEventListener("mouseover", () => {
@@ -77,4 +84,3 @@ botao.addEventListener("mouseout", () => {
     botao.style.boxShadow = "none";
     botao.style.transition = "0.5s"
 });
-//Responsividade: 804
