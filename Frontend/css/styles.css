@@ -66,18 +66,21 @@ header{
 }
 #resultados{
     margin-bottom: 100px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 #resultados div{
     border: black solid 2px;
     margin-bottom: 20px;
     margin-top: 20px;
     background-color: rgb(204, 205, 218);
-    margin-left: 5%;
-    margin-right: 5%;
+    overflow: hidden;
 }
 #resultados div p{
     margin: 0px;
     text-align: justify;
+    width: 100%;
+    word-break: break-all;
 }
 #resultados div h3{
     margin: 0px;
@@ -109,4 +112,7 @@ footer{
 }
 #texto{
     text-align: justify;
+}
+.nenhum{
+    font-weight: 700;
 }
