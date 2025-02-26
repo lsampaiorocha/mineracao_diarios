@@ -180,4 +180,3 @@ botao.addEventListener("mouseout", () => {
     botao.style.boxShadow = "none";
     botao.style.transition = "0.5s"
 });
-
