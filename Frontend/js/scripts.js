@@ -1,5 +1,5 @@
 /*Cria uma lista json com todas os jsons armazenados no sistema*/
-const json = ['json/nossa.json', 'json/10-09-2024.json', 'json/11-09-2024.json', 'json/12-09-2024.json', 'json/13-09-2024.json'];
+const json = ['json/nossa.json', 'json/10-09-2024.json', 'json/11-09-2024.json', 'json/12-09-2024.json', 'json/13-09-2024.json', 'json/02-12-2024.json', 'json/03-12-2024.json', 'json/04-12-2024.json', 'json/19-11-2024.json', 'json/28-11-2024.json', 'json/29-11-2024.json'];
 /*Cria uma constante para o botão de envio da pesquisa*/
 const botao = document.querySelector("#button")
 /*Quando o botão for pressionado, chama a função executar*/
