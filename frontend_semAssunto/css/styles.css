@@ -1,0 +1,278 @@
+/*Ajusta todos os elementos do doc para os paddings respeitarem o tamanho do elemento*/
+*{
+    box-sizing: border-box;
+}
+/*nomeAssunto é onde estão as caixas de orão, palavra-chave e assunto. Resultados contém os resultados obtidos da busca*/
+#nomeAssunto,
+#data,
+#resultados{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+#nomeAssunto{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    align-items: center;
+}
+h2{
+    border-bottom: solid black 2px;
+    text-align: center;
+    font-size: 30px;
+}
+/*Botão de busca*/
+#button{
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 5px 20px;
+    cursor: pointer;
+    background-color: #000000;
+    border: none;
+    color:#ffffff
+}
+/*Imagem da logo dentro do header*/
+#logo{
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    top: 0px;
+    margin-top: 5px;
+    padding-left: 10px;
+}
+/*Titilo do header*/
+#titulo{
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 40px;
+    text-shadow: 5px 1px 5px #2528df;
+    width: 700px;
+    margin-bottom: 0px;
+}
+body{
+    font-family:'Courier New', Courier, monospace;
+    margin: 0px;
+    min-height: 100vh;  
+    display: flex;    
+    flex-direction: column; 
+}
+html{
+    min-height: 100%;
+    height: auto;
+    background-color: #eeeef8;
+}
+header{
+    margin-bottom: 50px;
+    background-color: black;
+    color: #ffffff;
+    background-image: url("../img/pngtree-abstract-waving-particle-technology-background-abstract-gradient-design-template-for-brochures-image_416117-removebg-preview\ \(1\).png");
+    background-position-x: left;
+    background-position-y: 100px;
+    box-shadow: 0px 5px 5px rgb(18, 53, 94);
+}
+#resultados{
+    margin-bottom: 100px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#resultados div{
+    border: black solid 2px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: rgb(204, 205, 218);
+    overflow: hidden;
+}
+#resultados div p{
+    margin: 0px;
+    text-align: justify;
+    width: 100%;
+    word-break: break-all;
+}
+#resultados div h3{
+    margin: 0px;
+    text-align: justify;
+    color: black;
+}
+/*Div onde estao todas as perguntas iniciais*/
+#pergunta{
+    border: #000000 solid 2px;
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    background-color: rgb(204, 205, 218);
+}
+#datai,
+#dataf{
+    cursor:pointer;
+}
+footer{
+    margin-top: auto;
+    background-color: black;
+    color: #ffffff;
+    background-image: url("../img/pngtree-abstract-waving-particle-technology-background-abstract-gradient-design-template-for-brochures-image_416117-removebg-preview\ \(1\).png");
+    background-position-x: right;
+    background-position-y: 100px;
+    box-shadow: 0px -3px 10px rgb(18, 53, 94);
+    width: 100%;
+    display: flex;
+}
+/*Quando nenhum resultado é encontrado*/
+.nenhum{
+    font-weight: 700;
+}
+/*Div que contém o titulo*/
+.divTitulo{
+    display: flex;
+    justify-content: center;
+}
+/*Divs que contêm o social e sobre o laboratório*/
+#sobre,
+#social{
+    width: 50%;
+    text-align: center;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    flex-wrap: wrap;
+}
+/*Titulos de cada div*/
+#nos,
+#socialp{
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+/*Texto sobre o laboratório*/
+#lab{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    color: #eeeef8;
+    transition: 0.5s;
+}
+#lab:hover{
+    text-shadow: 1px 1px 1px #eeeef8;
+    transition: 0.5s;
+}
+.link{
+    color: #ffffff;
+    padding-right: 10px;
+    font-size: 20px;
+    transition: 0.5s;
+}
+.link:hover{
+    text-shadow: 1px 1px 1px #eeeef8;
+    transition: 0.5s;
+}
+/*O media sreen ajusta os elementos com base em uma altura ou tamanho especificado*/
+@media screen and (max-width: 960px){
+    #titulo{
+        font-size: 30px;
+        margin-left: 100px;
+    }
+    #logo{
+        width: 80px;
+        height: 80px;
+        margin-top: 10px;
+    }
+
+}
+@media screen and (max-width: 585px){
+    #logo{
+        margin-top: 30px;
+    }
+    #sobre{
+        font-size: 15px;
+        padding-left: 0px;
+    }
+}
+@media screen and (max-width: 441px) {
+    header{
+        margin-bottom: 20px;
+    }
+    #logo{
+        width: 50px;
+        height: 50px;
+        margin-top: 10px;
+    }
+    #titulo{
+        font-size: 15px;
+        padding-left: 50px;
+        margin:0px;
+    }
+    h2, h3{
+        font-size: 20px;
+    }
+    p, label{
+        font-size: 15px;
+    }
+    #orgao,
+    #assunto,
+    #nome{
+        width: 125px;
+    }
+    #assunto{
+        display: block;
+    }
+    #lab{
+        font-size: 15px;
+    }
+    #socialp,
+    #nos{
+        font-size: 20px;
+    }
+    #sobre{
+        padding-left: 0px;
+    }
+    .link{
+        font-size: 15px;
+    }
+    .caixaPergunta{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    input{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 284px) {
+    #logo{
+        margin-top: 20px;
+    }
+    #lab{
+        font-size: 10px;
+    }
+    p, label{
+        font-size: 10px;
+    }
+    h2, h3{
+        font-size: 15px;
+    }
+    input{
+        height: 15px;
+        font-size: 10px;
+    }
+    #orgao,
+    #assunto,
+    #nome{
+        margin: 0px;
+    }
+    #nomeAssunto{
+        margin: 0px;
+    }
+    footer{
+        flex-direction: column;
+        justify-items: center;
+    }
+    #sobre, #social{
+        width: 100%;
+        padding: 0px;
+    }
+}
