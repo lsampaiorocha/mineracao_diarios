@@ -2,6 +2,7 @@
 *{
     box-sizing: border-box;
 }
+
 /*nomeAssunto é onde estão as caixas de orão, palavra-chave e assunto. Resultados contém os resultados obtidos da busca*/
 #nomeAssunto,
 #data,

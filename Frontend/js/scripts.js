@@ -1,9 +1,7 @@
 /*Cria uma lista json com todas os jsons armazenados no sistema*/
 const json = ['json/publicacoes.json', 'json/10-09-2024.json', 'json/11-09-2024.json', 'json/12-09-2024.json', 'json/13-09-2024.json', 'json/nossa.json', 'json/02-12-2024.json', 'json/03-12-2024.json', 'json/04-12-2024.json', 'json/19-11-2024.json', 'json/28-11-2024.json', 'json/29-11-2024.json'];
 let c = 0;
-document.addEventListener("DOMContentLoaded", (e)=>{
-    executar(e);
-})
+
 /*Cria uma constante para o botão de envio da pesquisa*/
 const botao = document.querySelector("#button")
 /*Quando o botão for pressionado, chama a função executar*/
@@ -20,7 +18,7 @@ document.addEventListener("keydown", (e)=>{
 })
 function executar(e){
     let orgaoInput = '', assuntoInput = '', orgao = '', assunto='', datai='', dataf='', nome='', resultadosDiv = document.querySelector("#resultados");
-    var orgaoSem = '', nomeSem='', nomeInput = '';
+    var orgaoSem = '', nomeSem='', nomeInput = '', assuntoSem = '';
     let listaAssuntos = [], numeroAssunto = [], listaDatas = [], numeroData = [], aux, m, n;
     const assuntoMais = document.querySelector("#assuntoMaisPublicado"), dataMais = document.querySelector("#dataComMaisPublicacao");
 
