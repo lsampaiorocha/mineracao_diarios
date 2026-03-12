@@ -1,6 +1,6 @@
-Método HALF
+# Método HALF
 
-Repositório oficial com os códigos utilizados para extração de informações, aplicação do método e ferramenta para visualização dos resultados.
+## Repositório oficial com os códigos utilizados para extração de informações, aplicação do método e ferramenta para visualização dos resultados.
 
 Se quiser ler o artigo, olha ele aqui: https://sol.sbc.org.br/index.php/wcge/article/view/36333/36120
 
