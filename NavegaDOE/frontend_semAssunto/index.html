@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar arquivos</title>
+    <script src="js/scripts.js" defer></script>
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="img/Captura_de_tela_2024-10-28_142132-removebg-preview.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <img id="logo" src="img/logolagic1.png"/>
+        <div class="divTitulo">
+            <h1 id="titulo">Busca de diários oficiais do estado do Ceará - LAGIC</h1>
+        </div>
+    </header>
+    <div id="pergunta">
+        <h2>Digite o órgão, assunto ou nome que deseja buscar:</h2>
+        <div id="nomeAssunto">
+            <div>
+                <label for="orgao">Órgão emissor:</label>
+                <input type="text" name="orgao" placeholder="Insira um orgão" id="orgao">
+            </div>
+            <div>
+                <label for="assunto">Assunto:</label>
+                <input type="text" name="assunto" placeholder="Insira um assunto" id="assunto">
+            </div>    
+            <div>
+                <label for="nome">Palavras-chave:</label>
+                <input type="text" id="nome" name="nome" placeholder="Insira uma palavra-chave">
+            </div>
+        </div>
+        <div id="data">
+            <label for="datai">Escolha o intervalo de tempo que deseja buscar<br>Início:</label>
+            <br>
+            <input type="date" name="datei" id="datai">
+            <br>
+            <label for="datef">Fim:</label>
+            <br>
+            <input type="date" name="datef" id="dataf">
+            <br>
+            <button type="submit" id="button" >Enviar</button>
+        </div>
+    </div>
+    <div id="resultados"></div>
+    <footer>
+        <div id="sobre">
+            <p id="nos">Sobre nós:</p>
+            <a href="https://lagic.netlify.app" id="lab">Laboratório de Grafos e Inteligência Computacional(LAGIC) da Universidade Estadual do Ceará(UECE)</a>
+        </div>
+        <div id="social">
+            <p id="socialp">Social:</p>
+            <nav class="links">
+                <a href="https://www.instagram.com/lagic.uece/" class="link"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.instagram.com/lagic.uece/" class="link"><i class="bi bi-linkedin"></i></a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
